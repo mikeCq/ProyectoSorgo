@@ -72,7 +72,7 @@ Public Class ControlSalidas
             CBAnalista.Enabled = False
             BtImprimir.Enabled = False
             RBMamarillo.Checked = False
-            RBMblanco.Checked = False
+            RBTNSorgo.Checked = False
         ElseIf VAL(TxBruto.Text) = 0 And CbAlmacen.Text = "" And CbAcopio.Text = "" Then
             TxTara.Enabled = False
             TxIdBoleta.Enabled = False
@@ -235,10 +235,10 @@ Public Class ControlSalidas
         TxTotal.Text = FormatNumber(TxTotal.Text, 2)
     End Sub
     Private Sub BtImprimir_Click(sender As Object, e As EventArgs) Handles BtImprimir.Click
-        If RBMamarillo.Checked = True And RBMblanco.Checked = False Then
+        If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
             _maizAmarillo = "X"
             _maizBlanco = " "
-        ElseIf RBMblanco.Checked = True And RBMamarillo.Checked = False Then
+        ElseIf RBTNSorgo.Checked = True And RBMamarillo.Checked = False Then
             _maizBlanco = "X"
             _maizAmarillo = " "
         End If
@@ -286,7 +286,7 @@ Public Class ControlSalidas
             MessageBox.Show("El numero de boleta " & TxIdBoleta.Text & " ya existe", "Aviso")
         ElseIf salidaRegistrada(TxFolio.Text, estadoSalida) = True Then
             If TxFolio.Text = "" And CbNombre.Text <> "" Then
-                If Val(TxTara.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or (RBMblanco.Checked = False And RBMamarillo.Checked = False) Then
+                If Val(TxTara.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or (RBTNSorgo.Checked = False And RBMamarillo.Checked = False) Then
                     MessageBox.Show("Verifica campos en blanco", "Aviso")
                 Else
                     Try
@@ -737,7 +737,7 @@ Public Class ControlSalidas
                 Case "AMARILLO"
                     RBMamarillo.Checked = True
                 Case "BLANCO"
-                    RBMblanco.Checked = True
+                    RBTNSorgo.Checked = True
             End Select
             BloqueoFases()
             'TxImpurezas.Text = FormatNumber(TxImpurezas.Text, 1)

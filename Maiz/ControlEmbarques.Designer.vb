@@ -37,7 +37,7 @@ Partial Class ControlEmbarques
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GbGrupoGrano = New System.Windows.Forms.GroupBox()
-        Me.RBMblanco = New System.Windows.Forms.RadioButton()
+        Me.RBTNSorgo = New System.Windows.Forms.RadioButton()
         Me.CbNombre = New System.Windows.Forms.ComboBox()
         Me.CBAnalista = New System.Windows.Forms.ComboBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -253,7 +253,7 @@ Partial Class ControlEmbarques
         '
         'GbGrupoGrano
         '
-        Me.GbGrupoGrano.Controls.Add(Me.RBMblanco)
+        Me.GbGrupoGrano.Controls.Add(Me.RBTNSorgo)
         Me.GbGrupoGrano.Location = New System.Drawing.Point(0, 116)
         Me.GbGrupoGrano.Name = "GbGrupoGrano"
         Me.GbGrupoGrano.Size = New System.Drawing.Size(636, 45)
@@ -261,17 +261,17 @@ Partial Class ControlEmbarques
         Me.GbGrupoGrano.TabStop = False
         Me.GbGrupoGrano.Text = "Producto en Grano (Sorgo)"
         '
-        'RBMblanco
+        'RBTNSorgo
         '
-        Me.RBMblanco.AutoSize = True
-        Me.RBMblanco.Checked = True
-        Me.RBMblanco.Location = New System.Drawing.Point(9, 19)
-        Me.RBMblanco.Name = "RBMblanco"
-        Me.RBMblanco.Size = New System.Drawing.Size(63, 20)
-        Me.RBMblanco.TabIndex = 0
-        Me.RBMblanco.TabStop = True
-        Me.RBMblanco.Text = "Sorgo"
-        Me.RBMblanco.UseVisualStyleBackColor = True
+        Me.RBTNSorgo.AutoSize = True
+        Me.RBTNSorgo.Checked = True
+        Me.RBTNSorgo.Location = New System.Drawing.Point(9, 19)
+        Me.RBTNSorgo.Name = "RBTNSorgo"
+        Me.RBTNSorgo.Size = New System.Drawing.Size(63, 20)
+        Me.RBTNSorgo.TabIndex = 0
+        Me.RBTNSorgo.TabStop = True
+        Me.RBTNSorgo.Text = "Sorgo"
+        Me.RBTNSorgo.UseVisualStyleBackColor = True
         '
         'CbNombre
         '
@@ -775,7 +775,7 @@ Partial Class ControlEmbarques
     Friend WithEvents TxDeducciones As TextBox
     Friend WithEvents TxImpurezas As TextBox
     Friend WithEvents GbGrupoGrano As GroupBox
-    Friend WithEvents RBMblanco As RadioButton
+    Friend WithEvents RBTNSorgo As RadioButton
     Friend WithEvents Label17 As Label
     Friend WithEvents TxIdBoleta As TextBox
     Friend WithEvents BtImprimir As Button

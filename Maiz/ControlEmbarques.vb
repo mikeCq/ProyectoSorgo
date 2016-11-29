@@ -64,10 +64,10 @@ Public Class ControlEmbarques
         DgBoletaEmbarque.TabStop = False
     End Sub
     Private Sub BtImprimir_Click(sender As Object, e As EventArgs) Handles BtImprimir.Click
-        If RBMamarillo.Checked = True And RBMblanco.Checked = False Then
+        If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
             _maizAmarillo = "X"
             _maizBlanco = " "
-        ElseIf RBMblanco.Checked = True And RBMamarillo.Checked = False Then
+        ElseIf RBTNSorgo.Checked = True And RBMamarillo.Checked = False Then
             _maizBlanco = "X"
             _maizAmarillo = " "
         End If
@@ -92,7 +92,7 @@ Public Class ControlEmbarques
             DTPEmbarques.Enabled = True
             BtImprimir.Enabled = False
             RBMamarillo.Checked = False
-            RBMblanco.Checked = False
+            RBTNSorgo.Checked = False
         ElseIf VAL(TxTara.Text) > 0 And Val(TxBruto.Text) = 0 Then
             TxIdBoleta.Enabled = False
             TxFolio.Enabled = False
@@ -382,7 +382,7 @@ Public Class ControlEmbarques
 
                 End If
             ElseIf TxFolio.Text <> "" And CbNombre.Text <> "" And val(Txtara.Text) > 0 And TxPlacas.Text <> "" And Val(TxBruto.Text) > 0 And val(TxNeto.Text) > 0 And val(TxHumedad.text) = 0 Then
-                If CbLoteEmbarque.Text = "" Or (RBMamarillo.Checked = False And RBMblanco.Checked = False) Or CBContrato.SelectedValue = Nothing Or Val(TxNeto.Text) = 0 Then
+                If CbLoteEmbarque.Text = "" Or (RBMamarillo.Checked = False And RBTNSorgo.Checked = False) Or CBContrato.SelectedValue = Nothing Or Val(TxNeto.Text) = 0 Then
                     MessageBox.Show("Verifica campos en blanco", "Aviso")
                 Else
                     Try
@@ -599,7 +599,7 @@ Public Class ControlEmbarques
         CbLoteEmbarque.SelectedIndex = -1
         CbLoteEmbarque.Text = ""
         RBMamarillo.Checked = False
-        RBMblanco.Checked = False
+        RBTNSorgo.Checked = False
         CbLugarExp.Text = ""
         CbLugarExp.SelectedIndex = -1
         TxBruto.Text = "0"
@@ -831,7 +831,7 @@ Public Class ControlEmbarques
                 Case "AMARILLO"
                     RBMamarillo.Checked = True
                 Case "BLANCO"
-                    RBMblanco.Checked = True
+                    RBTNSorgo.Checked = True
             End Select
             If CbNombre.Text <> "" Then
                 seleccionarLote()

@@ -80,7 +80,7 @@ Public Class ControlEntradas
             CBContrato.Enabled = True
             BtImprimir.Enabled = False
             RBMamarillo.Checked = False
-            RBMblanco.Checked = False
+            RBTNSorgo.Checked = False
 
         ElseIf Val(TxBruto.Text) > 0 And CbAnalista.Text = "" And CbAcopio.Text = "" Then
             GbCalidad.Enabled = True
@@ -136,10 +136,10 @@ Public Class ControlEntradas
         End If
     End Sub
     Private Sub BtImprimir_Click(sender As Object, e As EventArgs) Handles BtImprimir.Click
-        If RBMamarillo.Checked = True And RBMblanco.Checked = False Then
+        If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
             _maizAmarillo = "X"
             _maizBlanco = " "
-        ElseIf RBMblanco.Checked = True And RBMamarillo.Checked = False Then
+        ElseIf RBTNSorgo.Checked = True And RBMamarillo.Checked = False Then
             _maizBlanco = "X"
             _maizAmarillo = " "
         End If
@@ -355,7 +355,7 @@ Public Class ControlEntradas
             MessageBox.Show("El numero de boleta " & TxIdBoleta.Text & " ya existe", "Aviso")
         ElseIf entradaRegistrada(TxFolio.Text, estadoEntrada) = True Then
             If TxFolio.Text = "" And CbNombre.Text <> "" Then
-                If Val(TxBruto.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or CbLoteEntrada.SelectedValue = Nothing Or CbLoteEntrada.Text = "" Or TxIdBoleta.Text = "" Or (RBMblanco.Checked = False And RBMamarillo.Checked = False) Then
+                If Val(TxBruto.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or CbLoteEntrada.SelectedValue = Nothing Or CbLoteEntrada.Text = "" Or TxIdBoleta.Text = "" Or (RBTNSorgo.Checked = False And RBMamarillo.Checked = False) Then
                     MessageBox.Show("Verifica campos en blanco", "Aviso")
                 Else
                     Try
@@ -860,7 +860,7 @@ Public Class ControlEntradas
                 Case "AMARILLO"
                     RBMamarillo.Checked = True
                 Case "BLANCO"
-                    RBMblanco.Checked = True
+                    RBTNSorgo.Checked = True
             End Select
             CbLoteEntrada.Text = CStr(row("LoteEntrada"))
             BloqueoFases()
