@@ -247,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="11771864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="11773400">
       <assemblyIdentity name="Maiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xsR3U2CZrYjQDufDPGQVWvIHgae5GVi8nqKMXPBPFqo=</dsig:DigestValue>
+        <dsig:DigestValue>lfQXlFSimK3Gya57myTFylBDAGUaRjrAt2vB9+VyYyA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,13 +270,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Maiz.exe.config" size="493">
+  <file name="Maiz.exe.config" size="494">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xV9ZxRGamgICxN70cnAfQ+ve2paYr6foYL6FLdJA0TU=</dsig:DigestValue>
+      <dsig:DigestValue>yQnAHnDvwhcnNRVJ4TbvF/deJ2o1Ia+gSu6lAdamt54=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Maiz.ico" size="9662">
