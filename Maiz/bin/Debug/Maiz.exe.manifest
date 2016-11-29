@@ -247,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="11773400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="12001752">
       <assemblyIdentity name="Maiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>lfQXlFSimK3Gya57myTFylBDAGUaRjrAt2vB9+VyYyA=</dsig:DigestValue>
+        <dsig:DigestValue>N7Xm5ZXwtaOEFSUY6ktcwC3I3W5shk5po/8dj9w+AJw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -270,6 +270,15 @@
       </hash>
     </dependentAssembly>
   </dependency>
+  <file name="Imagenes\logo_sorgo.png" size="43568">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CUXXTLZkciYg5SiPs/hRIRJSbIPvMYQuv9G2AneRFYI=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Maiz.exe.config" size="494">
     <hash>
       <dsig:Transforms>

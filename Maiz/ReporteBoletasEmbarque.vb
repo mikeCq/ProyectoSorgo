@@ -13,8 +13,4 @@ Public Class ReporteBoletasEmbarque
 
         CrBoletaEmbarque.ReportSource = RptBoletasEmbarques
     End Sub
-
-    Private Sub CrBoletaEmbarque_Load(sender As Object, e As EventArgs) Handles CrBoletaEmbarque.Load
-
-    End Sub
 End Class

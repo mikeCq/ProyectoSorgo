@@ -32,8 +32,8 @@ Partial Class Acceso
         Me.TxUsuario = New System.Windows.Forms.TextBox()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnAceptar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -91,9 +91,9 @@ Partial Class Acceso
         Me.Label2.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(270, 33)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 24)
+        Me.Label2.Size = New System.Drawing.Size(102, 24)
         Me.Label2.TabIndex = 7
-        Me.Label2.Text = "de Maiz"
+        Me.Label2.Text = "de Sorgo"
         '
         'TxUsuario
         '
@@ -126,15 +126,6 @@ Partial Class Acceso
         Me.BtnAceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.BtnAceptar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Maiz.My.Resources.Resources.MaizAcceso
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 55)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(194, 258)
-        Me.PictureBox1.TabIndex = 10
-        Me.PictureBox1.TabStop = False
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -145,13 +136,22 @@ Partial Class Acceso
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Cambiar Contraseña"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 53)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(195, 218)
+        Me.PictureBox1.TabIndex = 12
+        Me.PictureBox1.TabStop = False
+        '
         'Acceso
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(618, 325)
-        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.BtnCancelar)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.Label2)
@@ -181,6 +181,6 @@ Partial Class Acceso
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents TxUsuario As TextBox
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

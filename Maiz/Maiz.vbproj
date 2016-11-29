@@ -914,6 +914,7 @@
     <None Include="Imagenes\MaizAcceso.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagenes\logo_sorgo.png" />
     <Content Include="Maiz.ico" />
   </ItemGroup>
   <ItemGroup>

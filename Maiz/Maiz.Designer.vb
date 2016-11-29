@@ -231,7 +231,7 @@ Partial Class Maiz
         '
         Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContratosDeTigoConCompradoresToolStripMenuItem, Me.ComprasDeTrigoToolStripMenuItem})
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
         'ContratosDeTigoConCompradoresToolStripMenuItem
@@ -250,7 +250,7 @@ Partial Class Maiz
         '
         Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContratosDeTrigoConCompradoresToolStripMenuItem, Me.VentasDeTrigoToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'ContratosDeTrigoConCompradoresToolStripMenuItem
@@ -472,7 +472,7 @@ Partial Class Maiz
         Me.MinimumSize = New System.Drawing.Size(750, 500)
         Me.Name = "Maiz"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Sistema de Control de Maiz"
+        Me.Text = "Sistema de Control de Sorgo"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
