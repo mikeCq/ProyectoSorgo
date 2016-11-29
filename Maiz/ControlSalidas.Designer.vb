@@ -32,8 +32,8 @@ Partial Class ControlSalidas
         Me.GbBoletasSalidas = New System.Windows.Forms.GroupBox()
         Me.DgBoletaSalidas = New System.Windows.Forms.DataGridView()
         Me.GbDatoEntrada = New System.Windows.Forms.GroupBox()
+        Me.CbLugarExp = New System.Windows.Forms.ComboBox()
         Me.GbGrupoGrano = New System.Windows.Forms.GroupBox()
-        Me.RBMamarillo = New System.Windows.Forms.RadioButton()
         Me.RBMblanco = New System.Windows.Forms.RadioButton()
         Me.Label27 = New System.Windows.Forms.Label()
         Me.LbCapacidad = New System.Windows.Forms.Label()
@@ -85,7 +85,6 @@ Partial Class ControlSalidas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtImprimir = New System.Windows.Forms.Button()
-        Me.CbLugarExp = New System.Windows.Forms.ComboBox()
         Me.GbBoletasSalidas.SuspendLayout()
         CType(Me.DgBoletaSalidas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GbDatoEntrada.SuspendLayout()
@@ -233,39 +232,36 @@ Partial Class ControlSalidas
         Me.GbDatoEntrada.Size = New System.Drawing.Size(636, 643)
         Me.GbDatoEntrada.TabIndex = 1
         Me.GbDatoEntrada.TabStop = False
-        Me.GbDatoEntrada.Text = "Datos de la Entrada de Trigo"
+        Me.GbDatoEntrada.Text = "Datos de la Entrada de Sorgo"
+        '
+        'CbLugarExp
+        '
+        Me.CbLugarExp.FormattingEnabled = True
+        Me.CbLugarExp.Location = New System.Drawing.Point(150, 154)
+        Me.CbLugarExp.Name = "CbLugarExp"
+        Me.CbLugarExp.Size = New System.Drawing.Size(477, 24)
+        Me.CbLugarExp.TabIndex = 3
         '
         'GbGrupoGrano
         '
-        Me.GbGrupoGrano.Controls.Add(Me.RBMamarillo)
         Me.GbGrupoGrano.Controls.Add(Me.RBMblanco)
         Me.GbGrupoGrano.Location = New System.Drawing.Point(1, 103)
         Me.GbGrupoGrano.Name = "GbGrupoGrano"
         Me.GbGrupoGrano.Size = New System.Drawing.Size(630, 45)
         Me.GbGrupoGrano.TabIndex = 2
         Me.GbGrupoGrano.TabStop = False
-        Me.GbGrupoGrano.Text = "Producto en Grano (Maiz)"
-        '
-        'RBMamarillo
-        '
-        Me.RBMamarillo.AutoSize = True
-        Me.RBMamarillo.Location = New System.Drawing.Point(129, 19)
-        Me.RBMamarillo.Name = "RBMamarillo"
-        Me.RBMamarillo.Size = New System.Drawing.Size(73, 20)
-        Me.RBMamarillo.TabIndex = 1
-        Me.RBMamarillo.TabStop = True
-        Me.RBMamarillo.Text = "Amarillo"
-        Me.RBMamarillo.UseVisualStyleBackColor = True
+        Me.GbGrupoGrano.Text = "Producto en Grano (Sorgo)"
         '
         'RBMblanco
         '
         Me.RBMblanco.AutoSize = True
+        Me.RBMblanco.Checked = True
         Me.RBMblanco.Location = New System.Drawing.Point(9, 19)
         Me.RBMblanco.Name = "RBMblanco"
-        Me.RBMblanco.Size = New System.Drawing.Size(66, 20)
+        Me.RBMblanco.Size = New System.Drawing.Size(60, 20)
         Me.RBMblanco.TabIndex = 0
         Me.RBMblanco.TabStop = True
-        Me.RBMblanco.Text = "Blanco"
+        Me.RBMblanco.Text = "Sorgo"
         Me.RBMblanco.UseVisualStyleBackColor = True
         '
         'Label27
@@ -756,14 +752,6 @@ Partial Class ControlSalidas
         Me.BtImprimir.Text = "Imprimir"
         Me.BtImprimir.UseVisualStyleBackColor = True
         '
-        'CbLugarExp
-        '
-        Me.CbLugarExp.FormattingEnabled = True
-        Me.CbLugarExp.Location = New System.Drawing.Point(150, 154)
-        Me.CbLugarExp.Name = "CbLugarExp"
-        Me.CbLugarExp.Size = New System.Drawing.Size(477, 24)
-        Me.CbLugarExp.TabIndex = 3
-        '
         'ControlSalidas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -858,7 +846,6 @@ Partial Class ControlSalidas
     Friend WithEvents Label2 As Label
     Friend WithEvents CbNombre As ComboBox
     Friend WithEvents GbGrupoGrano As GroupBox
-    Friend WithEvents RBMamarillo As RadioButton
     Friend WithEvents RBMblanco As RadioButton
     Friend WithEvents TxPesoEsp As TextBox
     Friend WithEvents Label18 As Label

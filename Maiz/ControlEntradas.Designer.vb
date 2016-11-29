@@ -68,7 +68,6 @@ Partial Class ControlEntradas
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GbGrupoGrano = New System.Windows.Forms.GroupBox()
-        Me.RBMamarillo = New System.Windows.Forms.RadioButton()
         Me.RBMblanco = New System.Windows.Forms.RadioButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DTPEntradas = New System.Windows.Forms.DateTimePicker()
@@ -138,7 +137,7 @@ Partial Class ControlEntradas
         Me.GbDatoEntrada.Size = New System.Drawing.Size(636, 656)
         Me.GbDatoEntrada.TabIndex = 0
         Me.GbDatoEntrada.TabStop = False
-        Me.GbDatoEntrada.Text = "Datos de la Entrada de Maiz"
+        Me.GbDatoEntrada.Text = "Datos de la Entrada de Sorgo"
         '
         'CbLugarExp
         '
@@ -576,35 +575,24 @@ Partial Class ControlEntradas
         '
         'GbGrupoGrano
         '
-        Me.GbGrupoGrano.Controls.Add(Me.RBMamarillo)
         Me.GbGrupoGrano.Controls.Add(Me.RBMblanco)
         Me.GbGrupoGrano.Location = New System.Drawing.Point(0, 121)
         Me.GbGrupoGrano.Name = "GbGrupoGrano"
         Me.GbGrupoGrano.Size = New System.Drawing.Size(630, 45)
         Me.GbGrupoGrano.TabIndex = 3
         Me.GbGrupoGrano.TabStop = False
-        Me.GbGrupoGrano.Text = "Producto en Grano (Maiz)"
-        '
-        'RBMamarillo
-        '
-        Me.RBMamarillo.AutoSize = True
-        Me.RBMamarillo.Location = New System.Drawing.Point(129, 19)
-        Me.RBMamarillo.Name = "RBMamarillo"
-        Me.RBMamarillo.Size = New System.Drawing.Size(73, 20)
-        Me.RBMamarillo.TabIndex = 1
-        Me.RBMamarillo.TabStop = True
-        Me.RBMamarillo.Text = "Amarillo"
-        Me.RBMamarillo.UseVisualStyleBackColor = True
+        Me.GbGrupoGrano.Text = "Producto en Grano (Sorgo)"
         '
         'RBMblanco
         '
         Me.RBMblanco.AutoSize = True
+        Me.RBMblanco.Checked = True
         Me.RBMblanco.Location = New System.Drawing.Point(9, 19)
         Me.RBMblanco.Name = "RBMblanco"
-        Me.RBMblanco.Size = New System.Drawing.Size(66, 20)
+        Me.RBMblanco.Size = New System.Drawing.Size(60, 20)
         Me.RBMblanco.TabIndex = 0
         Me.RBMblanco.TabStop = True
-        Me.RBMblanco.Text = "Blanco"
+        Me.RBMblanco.Text = "Sorgo"
         Me.RBMblanco.UseVisualStyleBackColor = True
         '
         'Label4
@@ -859,7 +847,6 @@ Partial Class ControlEntradas
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents GbGrupoGrano As GroupBox
-    Friend WithEvents RBMamarillo As RadioButton
     Friend WithEvents RBMblanco As RadioButton
     Friend WithEvents Label4 As Label
     Friend WithEvents DTPEntradas As DateTimePicker
