@@ -60,7 +60,7 @@ Public Class ReporteEntradasGlobalXprod
             Try
                 Dim RptReporteEntradasGlobalxProd As New ReporteEntradaGlobalXprod
                 If DTInicio.Value <= DTFinal.Value And DTFinal.Value >= DTInicio.Value Then
-                    RptReporteEntradasGlobalxProd.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "MAIZ")
+                    RptReporteEntradasGlobalxProd.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
                     RptReporteEntradasGlobalxProd.SetParameterValue("@numboleta", TxNumBoleta.Text)
                     RptReporteEntradasGlobalxProd.SetParameterValue("@productor", IIf(CbProductor.SelectedValue = Nothing, "", CbProductor.SelectedValue))
                     RptReporteEntradasGlobalxProd.SetParameterValue("@fechaini", DTInicio.Value)
@@ -74,5 +74,9 @@ Public Class ReporteEntradasGlobalXprod
                 MsgBox(ex.ToString)
             End Try
         End If
+    End Sub
+
+    Private Sub CrEntradasGlobalXprod_Load(sender As Object, e As EventArgs) Handles CrEntradasGlobalXprod.Load
+
     End Sub
 End Class

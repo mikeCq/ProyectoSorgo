@@ -287,3 +287,8 @@ C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\proyectoSorgo\Maiz\obj\Debug\Maiz.Ve
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\proyectoSorgo\Maiz\obj\Debug\Maiz.vbproj.GenerateResource.Cache
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\proyectoSorgo\Maiz\obj\Debug\Maiz.exe.manifest
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\proyectoSorgo\Maiz\obj\Debug\Maiz.application
+C:\Users\Oscar Merino\Desktop\Repo_Sorgo\ProyectoSorgo\Maiz\bin\Debug\Maiz.exe.config
+C:\Users\Oscar Merino\Desktop\Repo_Sorgo\ProyectoSorgo\Maiz\obj\Debug\Maiz.vbproj.ResolveComReference.cache
+C:\Users\Oscar Merino\Desktop\Repo_Sorgo\ProyectoSorgo\Maiz\obj\Debug\Maiz.exe
+C:\Users\Oscar Merino\Desktop\Repo_Sorgo\ProyectoSorgo\Maiz\obj\Debug\Maiz.xml
+C:\Users\Oscar Merino\Desktop\Repo_Sorgo\ProyectoSorgo\Maiz\obj\Debug\Maiz.pdb

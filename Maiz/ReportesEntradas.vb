@@ -58,7 +58,7 @@ Public Class ReportesEntradas
             Try
                 Dim RptEntradas As New ReporteEntradas
                 If DTInicio.Value <= DTFinal.Value And DTFinal.Value >= DTInicio.Value Then
-                    RptEntradas.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "MAIZ")
+                    RptEntradas.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
                     RptEntradas.SetParameterValue("@numboleta", TxNumBoleta.Text)
                     RptEntradas.SetParameterValue("@productor", IIf(CbProductor.SelectedValue = Nothing, "", CbProductor.SelectedValue))
                     RptEntradas.SetParameterValue("@fechaini", DTInicio.Value)
@@ -74,4 +74,7 @@ Public Class ReportesEntradas
         End If
     End Sub
 
+    Private Sub CRentradas_Load(sender As Object, e As EventArgs) Handles CRentradas.Load
+
+    End Sub
 End Class

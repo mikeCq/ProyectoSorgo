@@ -58,7 +58,7 @@ Public Class ReportesEmbarquesXcomprador
             Try
                 Dim RptEmbarques As New ReporteEmbarquesXcomprador
                 If DTInicio.Value <= DTFinal.Value And DTFinal.Value >= DTInicio.Value Then
-                    RptEmbarques.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "MAIZ")
+                    RptEmbarques.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
                     RptEmbarques.SetParameterValue("@numboleta", TxNumBoleta.Text)
                     RptEmbarques.SetParameterValue("@comprador", IIf(CbComprador.SelectedValue = Nothing, "", CbComprador.SelectedValue))
                     RptEmbarques.SetParameterValue("@fechaini", DTInicio.Value)
@@ -72,5 +72,9 @@ Public Class ReportesEmbarquesXcomprador
                 MsgBox(ex.ToString)
             End Try
         End If
+    End Sub
+
+    Private Sub CREmbarques_Load(sender As Object, e As EventArgs) Handles CREmbarques.Load
+
     End Sub
 End Class

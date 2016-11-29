@@ -48,11 +48,11 @@ Partial Class ReportesSalidas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxNumBoleta = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Txpro = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtGenerarReporte = New System.Windows.Forms.Button()
         Me.CRsalidas = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
@@ -312,6 +312,15 @@ Partial Class ReportesSalidas
         Me.TxNumBoleta.Size = New System.Drawing.Size(75, 20)
         Me.TxNumBoleta.TabIndex = 0
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(8, 50)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(63, 13)
+        Me.Label12.TabIndex = 38
+        Me.Label12.Text = "No. Boleta :"
+        '
         'Txpro
         '
         Me.Txpro.AutoSize = True
@@ -320,6 +329,15 @@ Partial Class ReportesSalidas
         Me.Txpro.Size = New System.Drawing.Size(64, 13)
         Me.Txpro.TabIndex = 38
         Me.Txpro.Text = "Comprador :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(-85, -50)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(60, 13)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "No Boleta :"
         '
         'BtGenerarReporte
         '
@@ -347,24 +365,6 @@ Partial Class ReportesSalidas
         Me.CRsalidas.Size = New System.Drawing.Size(1383, 847)
         Me.CRsalidas.TabIndex = 1
         Me.CRsalidas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(-85, -50)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 13)
-        Me.Label1.TabIndex = 39
-        Me.Label1.Text = "No Boleta :"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(8, 50)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(63, 13)
-        Me.Label12.TabIndex = 38
-        Me.Label12.Text = "No. Boleta :"
         '
         'ReportesSalidas
         '

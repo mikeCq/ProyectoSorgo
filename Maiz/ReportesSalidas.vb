@@ -55,7 +55,7 @@ Public Class ReportesSalidas
             Try
                 Dim RptSalidas As New ReporteSalidas
                 If DTInicio.Value <= DTFinal.Value And DTFinal.Value >= DTInicio.Value Then
-                    RptSalidas.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "MAIZ")
+                    RptSalidas.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
                     RptSalidas.SetParameterValue("@numboleta", TxNumBoleta.Text)
                     RptSalidas.SetParameterValue("@comprador", IIf(CbComprador.SelectedValue = Nothing, "", CbComprador.SelectedValue))
                     RptSalidas.SetParameterValue("@fechaini", DTInicio.Value)
@@ -69,5 +69,9 @@ Public Class ReportesSalidas
                 MsgBox(ex.ToString)
             End Try
         End If
+    End Sub
+
+    Private Sub CRsalidas_Load(sender As Object, e As EventArgs) Handles CRsalidas.Load
+
     End Sub
 End Class

@@ -58,7 +58,7 @@ Public Class ReporteCompras
             Try
                 Dim RptReporteCompras As New RptComprasXproductor
                 If DTInicio.Value <= DTFinal.Value And DTFinal.Value >= DTInicio.Value Then
-                    RptReporteCompras.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "MAIZ")
+                    RptReporteCompras.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
                     RptReporteCompras.SetParameterValue("@idproductor", IIf(CbProductor.SelectedValue = Nothing, "", CbProductor.SelectedValue))
                     RptReporteCompras.SetParameterValue("@tipoContrato", IIf(CbTipoContrato.Text = Nothing, "", CbTipoContrato.Text))
                     RptReporteCompras.SetParameterValue("@fechaini", DTInicio.Value)
@@ -72,5 +72,9 @@ Public Class ReporteCompras
                 MsgBox(ex.ToString)
             End Try
         End If
+    End Sub
+
+    Private Sub CrComprasXproductor_Load(sender As Object, e As EventArgs) Handles CrComprasXproductor.Load
+
     End Sub
 End Class
