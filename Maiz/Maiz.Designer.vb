@@ -59,6 +59,7 @@ Partial Class Maiz
         Me.LotesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.EntradasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntradasGlobalesPorProductorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmbarquesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmbarquesPorClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,7 +80,6 @@ Partial Class Maiz
         Me.SbNombreUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SbUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.SbIdUsuario = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.EntradasGlobalesPorProductorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SsUsuario.SuspendLayout()
         Me.SuspendLayout()
@@ -206,13 +206,13 @@ Partial Class Maiz
         '
         Me.EntradasDeTrigoToolStripMenuItem.Name = "EntradasDeTrigoToolStripMenuItem"
         Me.EntradasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
-        Me.EntradasDeTrigoToolStripMenuItem.Text = "Entradas de Maiz"
+        Me.EntradasDeTrigoToolStripMenuItem.Text = "Entradas de Sorgo"
         '
         'SalidasDeTrigoToolStripMenuItem
         '
         Me.SalidasDeTrigoToolStripMenuItem.Name = "SalidasDeTrigoToolStripMenuItem"
         Me.SalidasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
-        Me.SalidasDeTrigoToolStripMenuItem.Text = "Salidas de Maiz"
+        Me.SalidasDeTrigoToolStripMenuItem.Text = "Salidas de Sorgo"
         '
         'EmbarquesDirectosToolStripMenuItem
         '
@@ -231,39 +231,39 @@ Partial Class Maiz
         '
         Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContratosDeTigoConCompradoresToolStripMenuItem, Me.ComprasDeTrigoToolStripMenuItem})
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ComprasToolStripMenuItem.Text = "Compras"
         '
         'ContratosDeTigoConCompradoresToolStripMenuItem
         '
         Me.ContratosDeTigoConCompradoresToolStripMenuItem.Name = "ContratosDeTigoConCompradoresToolStripMenuItem"
-        Me.ContratosDeTigoConCompradoresToolStripMenuItem.Size = New System.Drawing.Size(284, 22)
-        Me.ContratosDeTigoConCompradoresToolStripMenuItem.Text = "Contratos de Maiz con Productores"
+        Me.ContratosDeTigoConCompradoresToolStripMenuItem.Size = New System.Drawing.Size(290, 22)
+        Me.ContratosDeTigoConCompradoresToolStripMenuItem.Text = "Contratos de Sorgo con Productores"
         '
         'ComprasDeTrigoToolStripMenuItem
         '
         Me.ComprasDeTrigoToolStripMenuItem.Name = "ComprasDeTrigoToolStripMenuItem"
-        Me.ComprasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(284, 22)
-        Me.ComprasDeTrigoToolStripMenuItem.Text = "Compras de Maiz con Compradores"
+        Me.ComprasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(290, 22)
+        Me.ComprasDeTrigoToolStripMenuItem.Text = "Compras de Sorgo con Compradores"
         '
         'VentasToolStripMenuItem
         '
         Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ContratosDeTrigoConCompradoresToolStripMenuItem, Me.VentasDeTrigoToolStripMenuItem})
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'ContratosDeTrigoConCompradoresToolStripMenuItem
         '
         Me.ContratosDeTrigoConCompradoresToolStripMenuItem.Name = "ContratosDeTrigoConCompradoresToolStripMenuItem"
-        Me.ContratosDeTrigoConCompradoresToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
-        Me.ContratosDeTrigoConCompradoresToolStripMenuItem.Text = "Contratos de Maiz con Compradores"
+        Me.ContratosDeTrigoConCompradoresToolStripMenuItem.Size = New System.Drawing.Size(294, 22)
+        Me.ContratosDeTrigoConCompradoresToolStripMenuItem.Text = "Contratos de Sorgo con Compradores"
         '
         'VentasDeTrigoToolStripMenuItem
         '
         Me.VentasDeTrigoToolStripMenuItem.Name = "VentasDeTrigoToolStripMenuItem"
-        Me.VentasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(288, 22)
-        Me.VentasDeTrigoToolStripMenuItem.Text = "Ventas de Maiz"
+        Me.VentasDeTrigoToolStripMenuItem.Size = New System.Drawing.Size(294, 22)
+        Me.VentasDeTrigoToolStripMenuItem.Text = "Ventas de Sorgo"
         '
         'ProcesosToolStripMenuItem
         '
@@ -319,6 +319,12 @@ Partial Class Maiz
         Me.EntradasToolStripMenuItem.Name = "EntradasToolStripMenuItem"
         Me.EntradasToolStripMenuItem.Size = New System.Drawing.Size(265, 22)
         Me.EntradasToolStripMenuItem.Text = "Entradas"
+        '
+        'EntradasGlobalesPorProductorToolStripMenuItem
+        '
+        Me.EntradasGlobalesPorProductorToolStripMenuItem.Name = "EntradasGlobalesPorProductorToolStripMenuItem"
+        Me.EntradasGlobalesPorProductorToolStripMenuItem.Size = New System.Drawing.Size(265, 22)
+        Me.EntradasGlobalesPorProductorToolStripMenuItem.Text = "Entradas Globales por Productor"
         '
         'SalidasToolStripMenuItem
         '
@@ -447,12 +453,6 @@ Partial Class Maiz
         Me.SbIdUsuario.Size = New System.Drawing.Size(57, 17)
         Me.SbIdUsuario.Text = "idUsuario"
         Me.SbIdUsuario.Visible = False
-        '
-        'EntradasGlobalesPorProductorToolStripMenuItem
-        '
-        Me.EntradasGlobalesPorProductorToolStripMenuItem.Name = "EntradasGlobalesPorProductorToolStripMenuItem"
-        Me.EntradasGlobalesPorProductorToolStripMenuItem.Size = New System.Drawing.Size(265, 22)
-        Me.EntradasGlobalesPorProductorToolStripMenuItem.Text = "Entradas Globales por Productor"
         '
         'Maiz
         '
