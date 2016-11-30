@@ -71,7 +71,6 @@ Public Class ControlSalidas
             TxPlacas.Enabled = True
             CBAnalista.Enabled = False
             BtImprimir.Enabled = False
-            RBMamarillo.Checked = False
             RBTNSorgo.Checked = False
         ElseIf VAL(TxBruto.Text) = 0 And CbAlmacen.Text = "" And CbAcopio.Text = "" Then
             TxTara.Enabled = False
@@ -235,14 +234,15 @@ Public Class ControlSalidas
         TxTotal.Text = FormatNumber(TxTotal.Text, 2)
     End Sub
     Private Sub BtImprimir_Click(sender As Object, e As EventArgs) Handles BtImprimir.Click
-        If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
-            _maizAmarillo = "X"
-            _maizBlanco = " "
-        ElseIf RBTNSorgo.Checked = True And RBMamarillo.Checked = False Then
-            _maizBlanco = "X"
-            _maizAmarillo = " "
-        End If
-        _codigoSalida = TxFolio.Text
+        'If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
+        '    _maizAmarillo = "X"
+        '    _maizBlanco = " "
+        'Else
+        If RBTNSorgo.Checked = True Then
+                _maizBlanco = "X"
+                _maizAmarillo = " "
+            End If
+            _codigoSalida = TxFolio.Text
         ReporteBoletasSalidas.Show()
     End Sub
     Private Sub SoloNumerosTx(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TxTara.KeyPress, TxNeto.KeyPress, TxHumedad.KeyPress, TxImpurezas.KeyPress, TxGranoDan.KeyPress, TxGranoQuebrado.KeyPress, TxIdBoleta.KeyPress
@@ -286,7 +286,7 @@ Public Class ControlSalidas
             MessageBox.Show("El numero de boleta " & TxIdBoleta.Text & " ya existe", "Aviso")
         ElseIf salidaRegistrada(TxFolio.Text, estadoSalida) = True Then
             If TxFolio.Text = "" And CbNombre.Text <> "" Then
-                If Val(TxTara.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or (RBTNSorgo.Checked = False And RBMamarillo.Checked = False) Then
+                If Val(TxTara.Text) = 0 Or CbLugarExp.Text = "" Or CBConductor.Text = "" Or TxPlacas.Text = "" Or (RBTNSorgo.Checked = False) Then
                     MessageBox.Show("Verifica campos en blanco", "Aviso")
                 Else
                     Try
@@ -299,7 +299,7 @@ Public Class ControlSalidas
                         Fase1.Parameters.AddWithValue("@numeroBoleta", TxIdBoleta.Text)
                         Fase1.Parameters.AddWithValue("@NomVendedor", CbNombre.SelectedValue)
                         Fase1.Parameters.AddWithValue("@domicilioProductor", "")
-                        Fase1.Parameters.AddWithValue("@grupoGrano", IIf(RBMamarillo.Checked = True, "AMARILLO", "BLANCO"))
+                        Fase1.Parameters.AddWithValue("@grupoGrano", IIf(RBTNSorgo.Checked = True, "SORGO", ""))
                         Fase1.Parameters.AddWithValue("@lugarExpedicion", CbLugarExp.Text)
                         Fase1.Parameters.AddWithValue("@fechaPesaje", DTPSalidas.Text)
                         Fase1.Parameters.AddWithValue("@tara", (CDbl(TxTara.Text)) / 1000)
@@ -734,9 +734,7 @@ Public Class ControlSalidas
             CBAnalista.SelectedValue = row("usuarioAnalista")
             TxPlacas.Text = CStr(row("placasConductor"))
             Select Case TipoGrano
-                Case "AMARILLO"
-                    RBMamarillo.Checked = True
-                Case "BLANCO"
+                Case "SORGO"
                     RBTNSorgo.Checked = True
             End Select
             BloqueoFases()

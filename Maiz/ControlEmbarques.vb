@@ -64,10 +64,11 @@ Public Class ControlEmbarques
         DgBoletaEmbarque.TabStop = False
     End Sub
     Private Sub BtImprimir_Click(sender As Object, e As EventArgs) Handles BtImprimir.Click
-        If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
-            _maizAmarillo = "X"
-            _maizBlanco = " "
-        ElseIf RBTNSorgo.Checked = True And RBMamarillo.Checked = False Then
+        'If RBMamarillo.Checked = True And RBTNSorgo.Checked = False Then
+        '    _maizAmarillo = "X"
+        '    _maizBlanco = " "
+        'Else
+        If RBTNSorgo.Checked = True Then
             _maizBlanco = "X"
             _maizAmarillo = " "
         End If
@@ -91,7 +92,6 @@ Public Class ControlEmbarques
             CBAnalista.Enabled = False
             DTPEmbarques.Enabled = True
             BtImprimir.Enabled = False
-            RBMamarillo.Checked = False
             RBTNSorgo.Checked = False
         ElseIf VAL(TxTara.Text) > 0 And Val(TxBruto.Text) = 0 Then
             TxIdBoleta.Enabled = False
@@ -382,7 +382,7 @@ Public Class ControlEmbarques
 
                 End If
             ElseIf TxFolio.Text <> "" And CbNombre.Text <> "" And val(Txtara.Text) > 0 And TxPlacas.Text <> "" And Val(TxBruto.Text) > 0 And val(TxNeto.Text) > 0 And val(TxHumedad.text) = 0 Then
-                If CbLoteEmbarque.Text = "" Or (RBMamarillo.Checked = False And RBTNSorgo.Checked = False) Or CBContrato.SelectedValue = Nothing Or Val(TxNeto.Text) = 0 Then
+                If CbLoteEmbarque.Text = "" Or (RBTNSorgo.Checked = False) Or CBContrato.SelectedValue = Nothing Or Val(TxNeto.Text) = 0 Then
                     MessageBox.Show("Verifica campos en blanco", "Aviso")
                 Else
                     Try
@@ -393,7 +393,7 @@ Public Class ControlEmbarques
 
                         Fase2.Parameters.AddWithValue("@Consecutivo", TxFolio.Text)
                         Fase2.Parameters.AddWithValue("@LoteColonia", CbLoteEmbarque.Text)
-                        Fase2.Parameters.AddWithValue("@grupoGrano", IIf(RBMamarillo.Checked = True, "AMARILLO", "BLANCO"))
+                        Fase2.Parameters.AddWithValue("@grupoGrano", IIf(RBTNSorgo.Checked = True, "SORGO", ""))
                         Fase2.Parameters.AddWithValue("@Bruto", (CDbl(TxBruto.Text)) / 1000)
                         Fase2.Parameters.AddWithValue("@Neto", (CDbl(TxNeto.Text)) / 1000)
                         Fase2.Parameters.AddWithValue("@contratoComprador", CBContrato.SelectedValue)
@@ -598,7 +598,6 @@ Public Class ControlEmbarques
         CbNombre.Text = ""
         CbLoteEmbarque.SelectedIndex = -1
         CbLoteEmbarque.Text = ""
-        RBMamarillo.Checked = False
         RBTNSorgo.Checked = False
         CbLugarExp.Text = ""
         CbLugarExp.SelectedIndex = -1
@@ -828,9 +827,7 @@ Public Class ControlEmbarques
             CBAnalista.SelectedValue = row("usuarioAnalista")
             TxPlacas.Text = CStr(row("placasConductor"))
             Select Case TipoGrano
-                Case "AMARILLO"
-                    RBMamarillo.Checked = True
-                Case "BLANCO"
+                Case "SORGO"
                     RBTNSorgo.Checked = True
             End Select
             If CbNombre.Text <> "" Then

@@ -247,14 +247,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="12001752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Maiz.exe" size="12000728">
       <assemblyIdentity name="Maiz" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>N7Xm5ZXwtaOEFSUY6ktcwC3I3W5shk5po/8dj9w+AJw=</dsig:DigestValue>
+        <dsig:DigestValue>UnDnvtlFe0vcpAFypKzACRLKgPHL5E90OCRhXjMmI/k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
