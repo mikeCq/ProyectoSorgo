@@ -19,7 +19,7 @@ Public Class Acceso
             If usuarioRegistrado(TxUsuario.Text) = True Then
                 Dim contra As String = clave(TxUsuario.Text)
                 If contra.Equals(TxContraseña.Text) = True Then
-                    Dim Maiz As New Maiz
+                    Dim Maiz As New Sorgo
                     _codUsuario = TxUsuario.Text
                     Hide()
                     Maiz.ShowDialog()
@@ -41,7 +41,7 @@ Public Class Acceso
                 If usuarioRegistrado(TxUsuario.Text) = True Then
                     Dim contra As String = clave(TxUsuario.Text)
                     If contra.Equals(TxContraseña.Text) = True Then
-                        Dim Maiz As New Maiz
+                        Dim Maiz As New Sorgo
                         _codUsuario = TxUsuario.Text
                         Hide()
                         Maiz.ShowDialog()

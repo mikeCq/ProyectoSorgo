@@ -221,7 +221,6 @@ C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\bin\Debug\Crystal
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
-C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.vbprojResolveAssemblyReference.cache
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.vbproj.ResolveComReference.cache
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Acceso.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Acercade.resources
@@ -281,7 +280,7 @@ C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Si
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.TablasCalidad.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Tierras.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Transportes.resources
-C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Maiz.resources
+C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Sorgo.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Usuarios.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.Variedades.resources
 C:\Users\MSISTEMAS\Desktop\SORGO A SERVER12\ProyectoSorgo\Maiz\obj\Debug\Maiz.ventasMaiz.resources
