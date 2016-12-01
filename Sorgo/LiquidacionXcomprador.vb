@@ -114,13 +114,21 @@ Public Class LiquidacionXcomprador
         DGVTotalLiquidado.Columns("idContratoVenta").Visible = False
         DGVTotalLiquidado.Columns("IdComprador").Visible = False
         DGVTotalLiquidado.Columns("GrupoGrano").HeaderText = "Tipo Maiz"
+        DGVTotalLiquidado.Columns("GrupoGrano").ReadOnly = True
         DGVTotalLiquidado.Columns("FechaVenta").HeaderText = "Fecha de Liquidacion"
+        DGVTotalLiquidado.Columns("FechaVenta").ReadOnly = True
         DGVTotalLiquidado.Columns("TotalVentaContrato").HeaderText = "Total liquidado (Ton)"
+        DGVTotalLiquidado.Columns("TotalVentaContrato").ReadOnly = True
         DGVTotalLiquidado.Columns("ImporteTotal").HeaderText = "Importe"
+        DGVTotalLiquidado.Columns("ImporteTotal").ReadOnly = True
         DGVTotalLiquidado.Columns("Contrato").HeaderText = "Contrato"
+        DGVTotalLiquidado.Columns("Contrato").ReadOnly = True
         DGVTotalLiquidado.Columns("NombreComprador").HeaderText = "Comprador"
+        DGVTotalLiquidado.Columns("NombreComprador").ReadOnly = True
         DGVTotalLiquidado.Columns("TotalVentaContrato").DefaultCellStyle.Format = "###,##0.000"
+        DGVTotalLiquidado.Columns("TotalVentaContrato").ReadOnly = True
         DGVTotalLiquidado.Columns("ImporteTotal").DefaultCellStyle.Format = "###,##0.00"
+        DGVTotalLiquidado.Columns("ImporteTotal").ReadOnly = True
     End Sub
     Private Sub PropiedadesDGVTotalLiquidadoDetalle()
         DGVTotalLiquidadoDetalle.Columns("IdVentaComprador").Visible = False
@@ -128,13 +136,21 @@ Public Class LiquidacionXcomprador
         DGVTotalLiquidadoDetalle.Columns("IdComprador").Visible = False
         DGVTotalLiquidadoDetalle.Columns("NombreComprador").Visible = False
         DGVTotalLiquidadoDetalle.Columns("NumeroBoleta").HeaderText = "No. Boleta"
+        DGVTotalLiquidadoDetalle.Columns("NumeroBoleta").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("GrupoGrano").HeaderText = "Tipo Maiz"
+        DGVTotalLiquidadoDetalle.Columns("GrupoGrano").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Neto").HeaderText = "Neto"
+        DGVTotalLiquidadoDetalle.Columns("Neto").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Deduccion").HeaderText = "Deduccion"
+        DGVTotalLiquidadoDetalle.Columns("Deduccion").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Total").HeaderText = "Total"
+        DGVTotalLiquidadoDetalle.Columns("Total").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Neto").DefaultCellStyle.Format = "###,##0.00"
+        DGVTotalLiquidadoDetalle.Columns("Neto").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Deduccion").DefaultCellStyle.Format = "###,##0.00"
+        DGVTotalLiquidadoDetalle.Columns("Deduccion").ReadOnly = True
         DGVTotalLiquidadoDetalle.Columns("Total").DefaultCellStyle.Format = "###,##0.00"
+        DGVTotalLiquidadoDetalle.Columns("Total").ReadOnly = True
     End Sub
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BTNNuevo.Click
         Limpiar()
@@ -518,21 +534,6 @@ Public Class LiquidacionXcomprador
         Else
             TbEstatusContrato.Text = "INCOMPLETO"
         End If
-    End Sub
-    Private Sub TBNombreComprador_TextChanged(sender As Object, e As EventArgs) Handles TBNombreComprador.TextChanged
-
-    End Sub
-
-    Private Sub NUDToneladasContrato_ValueChanged(sender As Object, e As EventArgs) Handles NUDToneladasContrato.ValueChanged
-
-    End Sub
-
-    Private Sub NUDToneladasRestantes_ValueChanged(sender As Object, e As EventArgs) Handles NUDToneladasRestantes.ValueChanged
-
-    End Sub
-
-    Private Sub TbEstatusContrato_TextChanged(sender As Object, e As EventArgs) Handles TbEstatusContrato.TextChanged
-
     End Sub
     Private Sub BoletasLiquidadas(sender As Object, e As EventArgs) Handles DGVTotalLiquidado.DoubleClick
         DGVTotalLiquidadoDetalle.Columns.Clear()
