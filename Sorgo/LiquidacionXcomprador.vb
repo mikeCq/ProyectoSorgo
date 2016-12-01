@@ -407,6 +407,8 @@ Public Class LiquidacionXcomprador
         '--LimpiarGuardar()
     End Sub
     Private Sub Buscar()
+        LimpiarBusqueda()
+        DesmarcarChecks()
         Moneda = -1
         Dim BuscarCompradorLiquidacionVenta As New BuscarCompradorLiquidacionVenta
         BuscarCompradorLiquidacionVenta.ShowDialog()
@@ -488,6 +490,17 @@ Public Class LiquidacionXcomprador
             End If
             DGVTotalLiquidado.DataSource = dt3.Tables(0).DefaultView
         End If
+    End Sub
+    Private Sub LimpiarBusqueda()
+        TBTipoDeCambio.Text = ""
+        NUDPrecioContrato.Value = 0.00
+        TBPrecioPorTonelada.Text = ""
+        TBImporte.Text = ""
+        NUDToneladasSeleccionadas.Value = 0.00
+        NUDTotalLiquidar.Value = 0.00
+        CBTipoMoneda.SelectedItem = ""
+        DGVSalidasSeleccionadas.Columns.Clear()
+        DGVSalidasSeleccionadas.DataSource = Nothing
     End Sub
     Private Sub EstatusContrato()
         Dim IdEstatusContrato As Integer
@@ -601,7 +614,7 @@ Public Class LiquidacionXcomprador
                     TBImporte.Text = CDbl(TBPrecioPorTonelada.Text) * kilosAton
                     NUDPrecioContrato.Value = CDbl(TBPrecioPorTonelada.Text)
                     TBPrecioPorTonelada.Text = FormatNumber(Val(TBPrecioPorTonelada.Text), 2)
-                    TBPrecioPorTonelada.Text = Format(CType(variable, Decimal), "###0.###0")
+                    'TBPrecioPorTonelada.Text = Format(CType(variable, Decimal), "###0.###0")
                     TBImporte.Text = FormatNumber(Val(TBImporte.Text), 2)
                 ElseIf CBTipoMoneda.Text = "DLS" Then
                     tipoCambio = CDbl(TBTipoDeCambio.Text)
@@ -614,7 +627,7 @@ Public Class LiquidacionXcomprador
                 End If
             End If
         End If
-        TBPrecioPorTonelada.Text = FormatNumber(Val(variable), 2)
-        TBImporte.Text = FormatNumber(Val(TBImporte.Text), 2)
+        'TBPrecioPorTonelada.Text = FormatNumber(Val(variable), 2)
+        'TBImporte.Text = FormatNumber(Val(TBImporte.Text), 2)
     End Sub
 End Class
