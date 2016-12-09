@@ -4,13 +4,10 @@ Public Class ReporteLiquidacionesXprod
     Private Sub ReporteLiquidacionesXprod_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim RptLiquidacionProd As New ReporteLiquidacionesXproductor
         Dim codigo As String = liquidacionCalculosProd.codigoLiquidacionTP
-        RptLiquidacionProd.SetDatabaseLogon("sa", "Usuario01", "SERVER2008\SERVER12", "SORGO")
+        RptLiquidacionProd.SetDatabaseLogon(VarGlob.UserDB, VarGlob.PasswordDB, VarGlob.ServerDB, VarGlob.DataBase)
         RptLiquidacionProd.SetParameterValue("@idliquidaciontprincipal", liquidacionCalculosProd.codigoLiquidacionTP)
         CrLiquidacionProd.ReportSource = RptLiquidacionProd
 
     End Sub
 
-    Private Sub CrLiquidacionProd_Load(sender As Object, e As EventArgs) Handles CrLiquidacionProd.Load
-
-    End Sub
 End Class
