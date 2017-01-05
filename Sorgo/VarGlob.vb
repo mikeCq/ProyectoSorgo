@@ -16,8 +16,8 @@
     'Public Shared UserDB As String = "sa"
     'Public Shared PasswordDB As String = "Usuario01"
     'Public Shared ServerDB As String = "MSISTEMAS"
-    'Public Shared DataBase As String = "TRIGO"
-    'Public Shared ConexionPrincipal As String = "Data Source=MSISTEMAS;Initial Catalog=TRIGO;Persist Security Info=True;User ID=sa;Password=Usuario01" '*****  CONEXION MSISTEMAS
+    'Public Shared DataBase As String = "SORGO"
+    'Public Shared ConexionPrincipal As String = "Data Source=MSISTEMAS;Initial Catalog=SORGO;Persist Security Info=True;User ID=sa;Password=Usuario01" '*****  CONEXION MSISTEMAS
     '####################################################
 
 End Class
